@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  body {
+    color: #545454;
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+    background: url(https://source.unsplash.com/random) center;
+    background-size: cover;
+    
+    
+  }
+  
+  .container {
+    background: #16dd7a;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 25px;
+    
+  }
+  
+  .title {
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    font-size: 3rem;
+    text-shadow: black 3px 3px 1px;
+  }
+  
+  .title span {
+    color: #F2EBD3;
+  }
+  
+  .status-action {
+    display: flex;
+    margin-top: 25px;
+    font-size: 40px;
+    justify-content: space-around;
+    font-family: 'Niconne', cursive;
+    text-shadow: wheat 1px 1px 1px;
+    height: 30px;
+  }
+  
+  .status span {
+    color: #F2EBD3;
+    text-shadow: black 1px 1px 1px;
+  }
+  
+  .reset {
+    cursor: pointer;
+    
+  }
+  
+  .reset:hover {
+    color: #F2EBD3;
+    text-shadow: black 1px 1px 1px;
+  }
+  
+  .game-grid {
+    background: #0e462e;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin-top: 50px;
+  }
+  
+  .game-cell {
+    background: #16dd7a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+  }
+  
+  .x,
+  .o {
+    cursor: default;
+  }
+  
+  .x::after {
+    content: '×';
+    font-size: 200px;
+  }
+  
+  .o::after {
+    content: '○';
+    color: #F2EBD3;
+    font-size: 225px;
+  }
+  
+  .won::after {
+    color: #BD022F;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .game-grid {
+      margin-top: 25px;
+      grid-gap: 10px;
+    }
+  
+    .game-cell {
+      height: 150px;
+      width: 150px;
+    }
+  
+    .x::after {
+      font-size: 150px;
+    }
+  
+    .o::after {
+      font-size: 175px;
+    }
+  }
+  
+  @media only screen and (max-width: 540px) {
+    .container {
+      margin: 25px;
+      padding: 25px;
+    }
+  
+    .game-cell {
+      height: 100px;
+      width: 100px;
+    }
+  
+    .x::after {
+      font-size: 100px;
+    }
+  
+    .o::after {
+      font-size: 125px;
+    }
+  }
